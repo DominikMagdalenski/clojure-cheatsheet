@@ -78,7 +78,7 @@ lein repl
 ; => "abcQWE123"
 ```
 
-#### if - general structure
+#### `if` - general structure
 
 ```clojure
 (if boolean-form
@@ -89,3 +89,12 @@ lein repl
 `if` returns a value returned by `then-form` or `optional-else-form`,
 depending on `boolean-form` value. If you don't provide `optional-else-form`
 and `boolean-form` returns `false`, then `if` returns `nil`.
+
+#### `do` - *wrap up* multiple forms and run each of them
+
+```clojure
+(do (println "Qwerty")
+  99)
+; print line "Qwerty"
+; return value 99
+```
