@@ -71,7 +71,7 @@ lein repl
 ; => 3
 ```
 
-### Concatenate strings
+#### Concatenate strings
 
 ```clojure
 (str "abc" "QWE" "123")
