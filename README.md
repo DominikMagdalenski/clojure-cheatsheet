@@ -98,3 +98,16 @@ and `boolean-form` returns `false`, then `if` returns `nil`.
 ; print line "Qwerty"
 ; return value 99
 ```
+
+#### `when` - general structure
+
+Use it if you want to do multiple things when `boolean-form` is `true`,
+and always want to return `nil` when `boolean-form` is `false`.
+
+```clojure
+(when boolean-form
+  then-form1
+  then-form2
+  then-form3
+  then-form...)
+```
