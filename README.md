@@ -77,3 +77,15 @@ lein repl
 (str "abc" "QWE" "123")
 ; => "abcQWE123"
 ```
+
+#### if - general structure
+
+```clojure
+(if boolean-form
+  then-form
+  optional-else-form)
+```
+
+`if` returns a value returned by `then-form` or `optional-else-form`,
+depending on `boolean-form` value. If you don't provide `optional-else-form`
+and `boolean-form` returns `false`, then `if` returns `nil`.
