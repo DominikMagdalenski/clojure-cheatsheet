@@ -180,3 +180,14 @@ and always want to return `nil` when `boolean-form` is `false`.
 (and false)
 ; => false
 ```
+
+### Naming values with `def`
+
+You can use `def` to *bind* a name to a value in Clojure:
+
+```clojure
+(def posts-to-update [342, 827356, 172, 928375, 1434])
+
+posts-to-update
+; => [342, 827356, 172, 928375, 1434]
+```
