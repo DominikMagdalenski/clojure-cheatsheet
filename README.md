@@ -589,3 +589,15 @@ You can also use destructurization and rest parameters in `let`, just like you c
 ; => Iteration 4
 ; => Goodbye!
 ```
+
+### Regular expressions
+
+```clojure
+#"regular-expression"
+
+(re-find #"^oh-my" "oh-my-goodness")
+; => "oh-my"
+
+(re-find #"^oh-my" "what-is-this")
+; => nil
+```
