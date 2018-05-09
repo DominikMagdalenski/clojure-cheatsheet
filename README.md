@@ -141,3 +141,25 @@ and always want to return `nil` when `boolean-form` is `false`.
 (= 1 1 1)
 ; => true
 ```
+
+#### `or` - return either the first *truthy* value or the last value
+
+```clojure
+(or nil false :my-little-key :my-second-key)
+; => :my-little-key
+```
+
+```clojure
+(or (= 1 2) nil false)
+; => false
+```
+
+```clojure
+(or false nil)
+; => nil
+```
+
+```clojure
+(or nil)
+; => nil
+```
