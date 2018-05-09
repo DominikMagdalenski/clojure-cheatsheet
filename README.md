@@ -383,6 +383,36 @@ Confusing (because in this example `get` always returns `nil`):
 ; => false
 ```
 
+#### `reduce`
+
+```clojure
+(reduce + [1 2 3 4])
+; => 10
+```
+
+With an optional initial value:
+
+```clojure
+(reduce + 15 [1 2 3 4])
+; => 25
+```
+
+#### `seq` - return a seq on a coll
+
+```clojure
+(seq '(1 2 3))
+; => (1 2 3)
+
+(seq [1 2 3])
+; => (1 2 3)
+
+(seq #{1 2 3})
+; => (1 2 3)
+
+(seq {:first-name "Dominik" :last-name "Magdaleński"})
+; => ([:first-name "Dominik"] [:last-name "Magdaleński"])
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
