@@ -498,3 +498,23 @@ Keyword examples:
 (get-first-item [1 2 3 4])
 ; => 1
 ```
+
+### Destructuring maps
+
+```clojure
+(defn get-location
+  [{lat :lat lng :lng}]
+  {:lat lat :lng lng})
+
+(def user {:first-name "Dominik"
+           :last-name "Magdaleński"
+           :lat 43.78767
+           :lng 78.12345})
+
+(get-location user)
+; => {:lat 43.78767, :lng 78.12345}
+```
+
+You can do the same using a shorter syntax: `[{:keys [lat lng]}]`.
+
+In order to access the original map, you can use `:as` keyword: `[{:keys [lat lng]} :as location]`.
