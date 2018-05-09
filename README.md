@@ -487,3 +487,14 @@ Keyword examples:
   [first-arg & rest-args]
   (...)
 ```
+
+### Destructuring
+
+```clojure
+(defn get-first-item
+  [[first-item]]
+  first-item)
+
+(get-first-item [1 2 3 4])
+; => 1
+```
