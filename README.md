@@ -533,3 +533,21 @@ Example:
   123)
 ; => 123
 ```
+
+### Anonymous functions
+
+```clojure
+(fn [param-list]
+  function-body)
+```
+
+Shorter syntax:
+
+```clojure
+#(* % 2)    ; this is going to multiply its argument by two
+```
+
+`%` is equivalent to `%1` which is the first param of the function.
+
+`%1`, `%2`, `%3`, and so on... indicate the first, second, third, and so on..., param.
+`%&` indicates the rest parameter.
