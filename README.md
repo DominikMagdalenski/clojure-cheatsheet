@@ -34,6 +34,12 @@ java -jar target/uberjar/project-name-0.1.0-SNAPSHOT-standalone.jar
 lein repl
 ```
 
+### Truthy and Falsey values
+
+In Clojure only two values are *Falsey*: `false` and `nil`.
+
+The whole rest of values are *Truthy*.
+
 ### Built-in functions
 
 #### Add
