@@ -163,3 +163,20 @@ and always want to return `nil` when `boolean-form` is `false`.
 (or nil)
 ; => nil
 ```
+
+#### `and` - return the first *falsey* value or, if no values are *falsey*, the last *truthy* value
+
+```clojure
+(and :background-color :foreground-color)
+; => :foreground-color
+```
+
+```clojure
+(and :font-color nil (or false))
+; => nil
+```
+
+```clojure
+(and false)
+; => false
+```
