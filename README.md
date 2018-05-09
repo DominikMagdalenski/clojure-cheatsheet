@@ -373,6 +373,16 @@ Confusing (because in this example `get` always returns `nil`):
 ; => {:a 1, :b 2, :c 3}
 ```
 
+#### `empty?`
+
+```clojure
+(empty? [])
+; => true
+
+(empty? [1 2])
+; => false
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
