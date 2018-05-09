@@ -129,3 +129,15 @@ and always want to return `nil` when `boolean-form` is `false`.
 (nil? 214)
 ; -> false
 ```
+
+#### `=` - return `true` if all given args are equal, else return `false`
+
+```clojure
+(= 1 2 1 1 2)
+; => false
+```
+
+```clojure
+(= 1 1 1)
+; => true
+```
