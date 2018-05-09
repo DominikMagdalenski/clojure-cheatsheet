@@ -360,6 +360,19 @@ Confusing (because in this example `get` always returns `nil`):
 ; => (1 2 3 4)
 ```
 
+#### `into`
+
+```clojure
+(into [] #{:a :b :c})
+; => [:c :b :a]
+
+(into [2 3] [1])
+; => [2 3 1]
+
+(into {:a 1} [[:b 2] [:c 3]])
+; => {:a 1, :b 2, :c 3}
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
@@ -560,3 +573,4 @@ Shorter syntax:
 ```
 
 You can also use destructurization and rest parameters in `let`, just like you can in functions.
+
