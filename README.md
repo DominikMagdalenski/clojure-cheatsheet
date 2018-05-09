@@ -456,6 +456,27 @@ With an optional initial value:
 ; => (3 4 5 6)
 ```
 
+#### `filter`
+
+Return a lazy seq of the items in coll for which (pred item) returns true.
+
+```clojure
+(filter pred coll)
+```
+
+#### `some`
+
+From `(doc some)`:
+
+Returns the first logical true value of (pred x) for any x in coll,
+else `nil`.  One common idiom is to use a set as pred, for example
+this will return `:fred` if `:fred` is in the sequence, otherwise `nil`:
+`(some #{:fred} coll)`
+
+```clojure
+(some pred coll)
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
