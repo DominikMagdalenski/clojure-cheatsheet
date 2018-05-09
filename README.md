@@ -420,6 +420,42 @@ With an optional initial value:
 ; => {:a 1, :b 2}
 ```
 
+#### `take` - return the first *n* elements of a seq
+
+```clojure
+(take 3 [1 2 3 4 5 6 7 8 9 0])
+; => (1 2 3)
+```
+
+#### `drop` - return a seq with the first *n* elements removed
+
+```clojure
+(drop 3 [1 2 3 4 5 6 7 8 9 0])
+; => (4 5 6 7 8 9 0)
+```
+
+#### `take-while` - return a lazy seq of successive items from coll while (pred item) returns true
+
+```clojure
+(take-whie pred coll)
+```
+
+```clojure
+(take-while #(< % 3) [1 2 3 4 5 6])
+; => (1 2)
+```
+
+#### `drop-while` - return a lazy seq of the items in coll starting from the first item for which (pred item) returns logical false
+
+```clojure
+(drop-while pred coll)
+```
+
+```clojure
+(drop-while #(< % 3) [1 2 3 4 5 6])
+; => (3 4 5 6)
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
