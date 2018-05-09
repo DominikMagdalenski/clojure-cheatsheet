@@ -551,3 +551,12 @@ Shorter syntax:
 
 `%1`, `%2`, `%3`, and so on... indicate the first, second, third, and so on..., param.
 `%&` indicates the rest parameter.
+
+### `let` - *bind* a name to a value
+
+```clojure
+(let [x 1] (+ x 2))
+; => 3
+```
+
+You can also use destructurization and rest parameters in `let`, just like you can in functions.
