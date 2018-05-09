@@ -574,3 +574,18 @@ Shorter syntax:
 
 You can also use destructurization and rest parameters in `let`, just like you can in functions.
 
+### `loop`
+
+```clojure
+(loop [iteration 0]
+  (println (str "Iteration " iteration))
+  (if (> iteration 3)
+    (println "Bye!")
+    (recur (inc iteration))))
+; => Iteration 0
+; => Iteration 1
+; => Iteration 2
+; => Iteration 3
+; => Iteration 4
+; => Goodbye!
+```
