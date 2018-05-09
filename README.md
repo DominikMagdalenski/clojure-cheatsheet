@@ -518,3 +518,18 @@ Keyword examples:
 You can do the same using a shorter syntax: `[{:keys [lat lng]}]`.
 
 In order to access the original map, you can use `:as` keyword: `[{:keys [lat lng]} :as location]`.
+
+### Function body
+
+The *function body* can contain forms of any kind. Clojure automatically returns the last form evaluated.
+
+Example:
+
+```clojure
+(defn fn-example
+  []
+  (get [1 2 3] 1)
+  (or false true)
+  123)
+; => 123
+```
