@@ -117,3 +117,15 @@ and always want to return `nil` when `boolean-form` is `false`.
   then-form3
   then-form...)
 ```
+
+#### `nil?` - return `true` if `nil` else return `false`
+
+```clojure
+(nil? nil)
+; => true
+```
+
+```clojure
+(nil? 214)
+; -> false
+```
