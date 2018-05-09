@@ -40,6 +40,14 @@ In Clojure only two values are *Falsey*: `false` and `nil`.
 
 The whole rest of values are *Truthy*.
 
+### Function Calls, Macro Calls, and Special Forms
+
+*Function Calls* are expressions that have a function expression as the operator.
+
+*Macro Calls*?
+
+*Special Forms*, unlike *Function Calls*, don't always evaluate all of their operands. 
+
 ### Built-in functions
 
 #### `doc` - display documentation of given function
@@ -338,6 +346,20 @@ Confusing (because in this example `get` always returns `nil`):
 ; => nil
 ```
 
+#### `inc` - increment by 1
+
+```clojure
+(inc 1.1)
+; => 2.1
+```
+
+#### `map`
+
+```clojure
+(map inc [0 1 2 3])
+; => (1 2 3 4)
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
@@ -423,4 +445,45 @@ Keyword examples:
 
 ```clojure
 #{"Dominik Magdaleński" 1 :a-key}
+```
+
+### Multi-arity functions
+
+```clojure
+(defn multi-arity
+  ;; 3-arity arguments and body
+  ([first-arg second-arg third-arg]
+     (do-things first-arg second-arg third-arg))
+  ;; 2-arity arguments and body
+  ([first-arg second-arg]
+     (do-things first-arg second-arg))
+  ;; 1-arity arguments and body
+  ([first-arg]
+     (do-things first-arg)))
+```
+
+```clojure
+(defn greeting
+  ([name]
+    (str "Hello, " name "!"))
+  ([]
+    (greeting "Stranger")))
+```
+
+```clojure
+(greeting)
+; => "Hello, Stranger!"
+```
+
+```clojure
+(greeting "Dominik")
+; => "Hello, Dominik!"
+```
+
+### `&` - the rest parameter
+
+```clojure
+(defn my-func
+  [first-arg & rest-args]
+  (...)
 ```
