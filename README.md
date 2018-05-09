@@ -413,6 +413,13 @@ With an optional initial value:
 ; => ([:first-name "Dominik"] [:last-name "Magdaleński"])
 ```
 
+#### `assoc` - associate a key with a value in a map
+
+```clojure
+(assoc {:a 1} :b 2)
+; => {:a 1, :b 2}
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
