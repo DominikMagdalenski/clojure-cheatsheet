@@ -477,6 +477,20 @@ this will return `:fred` if `:fred` is in the sequence, otherwise `nil`:
 (some pred coll)
 ```
 
+#### `sort`
+
+```clojure
+(sort [3 1 2])
+; => (1 2 3)
+```
+
+#### `sort-by`
+
+```clojure
+(sort-by count ["aaa", "c", "bb"])
+; => ("c", "bb", "aaa")
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
