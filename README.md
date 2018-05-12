@@ -491,6 +491,13 @@ this will return `:fred` if `:fred` is in the sequence, otherwise `nil`:
 ; => ("c", "bb", "aaa")
 ```
 
+#### `concat` - append the members of one seq to the end of another
+
+```clojure
+(concat [1 2] [3 4])
+; => (1 2 3 4)
+```
+
 ### Naming values with `def`
 
 You can use `def` to *bind* a name to a value in Clojure:
